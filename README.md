@@ -9,7 +9,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Publish This Package](#publish-this-package)
+- [Versioning](#versioning)
   - [Installation](#installation)
   - [Usage](#usage)
     - [Vitest Configuration](#vitest-configuration)
@@ -43,21 +43,31 @@ npm run debug
 
 This package and its dependencies are installed directly from GitHub repositories. No special npm configuration is required.
 
-# Publish This Package
+# Versioning
 
-This package is distributed via GitHub. To release a new version:
+This is a public GitHub repository that is directly referenced by other projects. To create a new version:
 
 1. **Update version in `package.json`**
 2. **Commit your changes:**
    ```bash
    git add .
-   git commit -m "Release v1.1.0"
+   git commit -m "v1.1.0: Description of changes"
    ```
-3. **Create a git tag:**
+3. **Create a git tag (optional but recommended):**
    ```bash
    git tag v1.1.0
    git push origin main --tags
    ```
+
+Projects can reference this repo directly:
+
+```bash
+# Reference latest from main branch
+npm install --save github:dream-lab-ai/pam-vitest-config
+
+# Or reference a specific tag
+npm install --save github:dream-lab-ai/pam-vitest-config#v1.1.0
+```
 
 ## Installation
 

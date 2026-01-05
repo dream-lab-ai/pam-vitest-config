@@ -28,10 +28,6 @@
   "engines": {
     "node": ">=22"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "private"
-  },
   "lint-staged": {
     "*": [
       "npm run lint",

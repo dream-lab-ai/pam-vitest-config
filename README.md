@@ -9,14 +9,14 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Vitest Configuration](#vitest-configuration)
+  - [ESLint Configuration](#eslint-configuration)
+  - [Prettier Configuration](#prettier-configuration)
+- [Other configs](#other-configs)
+- [Configuration Examples](#configuration-examples)
 - [Versioning](#versioning)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Vitest Configuration](#vitest-configuration)
-    - [ESLint Configuration](#eslint-configuration)
-    - [Prettier Configuration](#prettier-configuration)
-  - [Other configs](#other-configs)
-  - [Configuration Examples](#configuration-examples)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -39,51 +39,39 @@ To run index.js and test the code in there
 npm run debug
 ```
 
-## Pre Requisites
+## Prerequisites
+
+**Node.js**: >=22 (tested on v22.14.0)
+
+**Required peer dependencies**:
+
+- `vitest` >= 4.0.0
 
 This package and its dependencies are installed directly from GitHub repositories. No special npm configuration is required.
 
-# Versioning
-
-This is a public GitHub repository that is directly referenced by other projects. To create a new version:
-
-1. **Update version in `package.json`**
-2. **Commit your changes:**
-   ```bash
-   git add .
-   git commit -m "v1.1.0: Description of changes"
-   ```
-3. **Create a git tag (optional but recommended):**
-   ```bash
-   git tag v1.1.0
-   git push origin main --tags
-   ```
-
-Projects can reference this repo directly:
-
-```bash
-# Reference latest from main branch
-npm install --save github:dream-lab-ai/pam-vitest-config
-
-# Or reference a specific tag
-npm install --save github:dream-lab-ai/pam-vitest-config#v1.1.0
-```
-
 ## Installation
 
-Install this package directly from GitHub as a `dependency`:
+Add this package to your `package.json` as a `dependency`:
 
-```bash
-npm install --save github:dream-lab-ai/pam-vitest-config
+```json
+{
+  "dependencies": {
+    "@dream-lab-ai/pam-vitest-config": "github:dream-lab-ai/pam-vitest-config"
+  }
+}
 ```
 
-Or using a specific version/tag:
+Or reference a specific version/tag:
 
-```bash
-npm install --save dream-lab-ai/pam-vitest-config#v1.0.0
+```json
+{
+  "dependencies": {
+    "@dream-lab-ai/pam-vitest-config": "github:dream-lab-ai/pam-vitest-config#v1.0.0"
+  }
+}
 ```
 
-[`vitest`](https://vitest.dev/) version `^4.0.0` is required as `peerDependencies` for this preset.
+Then run `npm install`.
 
 This package also includes linting and formatting configurations from `@dream-lab-ai/pam-eslint-config`.
 
@@ -158,3 +146,29 @@ You can use them standalone.
 ## Configuration Examples
 
 Please check the examples section of this repository to find each type of possible configuration.
+
+## Versioning
+
+This is a public GitHub repository that is directly referenced by other projects. To create a new version:
+
+1. **Update version in `package.json`**
+2. **Commit your changes:**
+   ```bash
+   git add .
+   git commit -m "v1.1.0: Description of changes"
+   ```
+3. **Create a git tag (optional but recommended):**
+   ```bash
+   git tag v1.1.0
+   git push origin main --tags
+   ```
+
+Projects reference this repo in their `package.json`:
+
+```json
+{
+  "dependencies": {
+    "@dream-lab-ai/pam-vitest-config": "github:dream-lab-ai/pam-vitest-config#v1.1.0"
+  }
+}
+```

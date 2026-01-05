@@ -14,7 +14,7 @@ const pamVitestConfig = [
   ),
 ]
   .filter(Boolean)
-  .map(link => `./presets/${link}`)
+  .map((link) => `./presets/${link}`)
   .map(require)
   .reduce(merge);
 

@@ -1,0 +1,36 @@
+# config files and scripts
+.git-blame-ignore-revs
+.gitattributes
+.gitignore
+.npmrc
+.nvmrc
+.yamllint
+.dockerignore
+.eslintignore
+.prettierignore
+Dockerfile
+.ebextensions
+package.json
+package-lock.json
+
+
+# folders not needed to be linted
+/node_modules
+/.husky
+/examples
+/coverage
+
+# extensions to be excluded
+*.sh
+*.log
+*.pem
+*.pub
+*.sql
+*.xml
+*.bin
+*.bat
+*.pdf
+*.opts
+*.properties
+*.png
+*.md
